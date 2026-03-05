@@ -6,10 +6,12 @@ import productRoutes from "./routes/productRoutes";
 import cartRoutes from "./routes/cartRoutes";
 import orderRoutes from "./routes/orderRoutes";
 import { prisma } from "./lib/prisma";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
